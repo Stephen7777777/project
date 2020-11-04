@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="" style="max-width:500px;">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.form)">
+
+        <div class="form-froup">
+            <input class="form-control" minlength="8" maxlength="10"  required name="title"  type="text"  [(ngModel)]="form.title">
+
+        </div>
+        <div class="form-group">
+        <input class="form-control" required name="body" type="text" [(ngModel)]="form.body">
+        </div>
+
+        <button type="submit" value="Send">submit</button>
+    </form>
+    
+    </div>
+
+
+
+
+<br>
+    <div *ngIf="display">
+        {{display.title}}
+        {{display.body}}
+    </div>
+
+    <br><br>
+    <div *ngIf="!form.valid && form.dirty">
+        <div class="text-danger">Form is invalid</div>
+    </div>
+    <div *ngFor="let data of list" class="s">
+        {{data.id}}, {{data.title}}, {{data.body}}<br>
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<p>users works!</p>
+
+
+<input type = "text" [(ngModel)] = "myName">
+
+<br>
+<button (click)="checker()">check name</button>
+{{user1}}
+
+<div *ngFor = "let data of list">
+    {{data.id}} {{data.title}}
+
+</div>
+
+<div *ngIf="erroMessage">
+    
+</div>
