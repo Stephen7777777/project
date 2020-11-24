@@ -7,12 +7,14 @@ import { UsersComponent } from './users/users.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DacxiComponent } from './dacxi/dacxi.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    FormComponent
+    FormComponent,
+    DacxiComponent
   ],
   imports: [
     BrowserModule,
